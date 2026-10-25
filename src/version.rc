@@ -1,0 +1,29 @@
+#include <winver.h>
+
+#define STR_(x) #x
+#define STR(x) STR_(x)
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     VER_MAJOR, VER_MINOR, VER_PATCH, 0
+PRODUCTVERSION  VER_MAJOR, VER_MINOR, VER_PATCH, 0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Better file sizes in Explorer details"
+            VALUE "FileVersion", STR(VER)
+            VALUE "InternalName", "ExplorerBetterFileSizes"
+            VALUE "LegalCopyright", "GPL-3.0"
+            VALUE "OriginalFilename", "ExplorerBetterFileSizes.dll"
+            VALUE "ProductName", "ExplorerBetterFileSizes"
+            VALUE "ProductVersion", STR(VER)
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
